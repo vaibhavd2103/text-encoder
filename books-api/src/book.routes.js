@@ -1,11 +1,20 @@
 const express = require("express");
 const Book = require("./book.model");
+const base64 = require("base-64");
+
 const router = express.Router();
 
 // Get all books
 router.get("/", async (req, res) => {
-  const books = await Book.find();
-  res.send(books[0]);
+  try {
+    const books = await Book.find();
+    // const decodedData = base64.decode(books[0].encoded_xml_data);
+    const decodedData = books;
+    console.log(decodedData);
+    res.send(books);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 // Get a single book by ID

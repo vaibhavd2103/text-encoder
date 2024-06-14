@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import lxml.etree as ET
 from pymongo import MongoClient, errors
 import base64
+import xmltodict
+import json
 
 # Function to scrape book data from a single page
 def scrape_page(url):
@@ -86,9 +88,15 @@ except errors.ConnectionError as e:
 # Read the XML data from the file
 with open("books.xml", "rb") as file:
     xml_data = file.read()
+    
+# xml to json convertor
+json_data = xmltodict.parse(xml_data, dict_constructor=dict)
+required_json_data = json_data["books"]["book"]
 
 # Optional: Encode the XML data using base64
-encoded_data = base64.b64encode(xml_data).decode('utf-8')
+# encoded_data = base64.b64encode(xml_data).decode('utf-8')
+encoded_data = json.dumps(required_json_data)
+print(encoded_data)
 
 # Prepare the document to be inserted
 document = {
@@ -101,5 +109,3 @@ try:
     print("Data has been successfully encoded (if applicable) and stored in MongoDB.")
 except errors.PyMongoError as e:
     print(f"An error occurred while inserting the document: {e}")
-    
-    # check
