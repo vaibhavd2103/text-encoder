@@ -5,7 +5,7 @@ const router = express.Router();
 // Get all books
 router.get("/", async (req, res) => {
   const books = await Book.find();
-  res.send(books);
+  res.send(books[0]);
 });
 
 // Get a single book by ID
