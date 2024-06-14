@@ -1,0 +1,603 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<books>
+  <book>
+    <title>A Light in the Attic</title>
+    <price>1.77</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Tipping the Velvet</title>
+    <price>3.74</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Soumission</title>
+    <price>0.10</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Sharp Objects</title>
+    <price>7.82</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>Sapiens: A Brief History of Humankind</title>
+    <price>4.23</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>The Requiem Red</title>
+    <price>2.65</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>The Dirty Little Secrets of Getting Your Dream Job</title>
+    <price>3.34</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull</title>
+    <price>7.93</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics</title>
+    <price>2.60</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>The Black Maria</title>
+    <price>2.15</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Starving Hearts (Triangular Trade Trilogy, #1)</title>
+    <price>3.99</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Shakespeare's Sonnets</title>
+    <price>0.66</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>Set Me Free</title>
+    <price>7.46</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Scott Pilgrim's Precious Little Life (Scott Pilgrim #1)</title>
+    <price>2.29</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Rip it Up and Start Again</title>
+    <price>5.02</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Our Band Could Be Your Life: Scenes from the American Indie Underground, 1981-1991</title>
+    <price>7.25</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Olio</title>
+    <price>3.88</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Mesaerion: The Best Science Fiction Stories 1800-1849</title>
+    <price>7.59</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Libertarianism for Beginners</title>
+    <price>1.33</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>It's Only the Himalayas</title>
+    <price>5.17</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>In Her Wake</title>
+    <price>2.84</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>How Music Works</title>
+    <price>7.32</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Foolproof Preserving: A Guide to Small Batch Jams, Jellies, Pickles, Condiments, and More: A Foolproof Guide to Making Small Batch Jams, Jellies, Pickles, Condiments, and More</title>
+    <price>0.52</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Chase Me (Paris Nights #2)</title>
+    <price>5.27</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Black Dust</title>
+    <price>4.53</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Birdsong: A Story in Pictures</title>
+    <price>4.64</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>America's Cradle of Quarterbacks: Western Pennsylvania's Football Factory from Johnny Unitas to Joe Montana</title>
+    <price>2.50</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Aladdin and His Wonderful Lamp</title>
+    <price>3.13</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Worlds Elsewhere: Journeys Around Shakespeare’s Globe</title>
+    <price>0.30</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Wall and Piece</title>
+    <price>4.18</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>The Four Agreements: A Practical Guide to Personal Freedom</title>
+    <price>7.66</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>The Five Love Languages: How to Express Heartfelt Commitment to Your Mate</title>
+    <price>1.05</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>The Elephant Tree</title>
+    <price>3.82</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>The Bear and the Piano</title>
+    <price>6.89</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Sophie's World</title>
+    <price>5.94</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Penny Maybe</title>
+    <price>3.29</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Maude (1883-1993):She Grew Up with the country</title>
+    <price>8.02</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>In a Dark, Dark Wood</title>
+    <price>9.63</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Behind Closed Doors</title>
+    <price>2.22</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>You can't bury them all: Poems</title>
+    <price>3.63</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Slow States of Collapse: Poems</title>
+    <price>7.31</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Reasons to Stay Alive</title>
+    <price>6.41</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Private Paris (Private #10)</title>
+    <price>7.61</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>#HigherSelfie: Wake Up Your Life. Free Your Soul. Find Your Tribe.</title>
+    <price>3.11</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Without Borders (Wanderlove #1)</title>
+    <price>5.07</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>When We Collided</title>
+    <price>1.77</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>We Love You, Charlie Freeman</title>
+    <price>0.27</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Untitled Collection: Sabbath Poems 2014</title>
+    <price>4.27</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>Unseen City: The Majesty of Pigeons, the Discreet Charm of Snails &amp; Other Wonders of the Urban Wilderness</title>
+    <price>4.18</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>Unicorn Tracks</title>
+    <price>8.78</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Unbound: How Eight Technologies Made Us Human, Transformed Society, and Brought Our World to the Brink</title>
+    <price>5.52</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Tsubasa: WoRLD CHRoNiCLE 2 (Tsubasa WoRLD CHRoNiCLE #2)</title>
+    <price>6.28</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Throwing Rocks at the Google Bus: How Growth Became the Enemy of Prosperity</title>
+    <price>1.12</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>This One Summer</title>
+    <price>9.49</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>Thirst</title>
+    <price>7.27</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>The Torch Is Passed: A Harding Family Story</title>
+    <price>9.09</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>The Secret of Dreadwillow Carse</title>
+    <price>6.13</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>The Pioneer Woman Cooks: Dinnertime: Comfort Classics, Freezer Food, 16-Minute Meals, and Other Delicious Ways to Solve Supper!</title>
+    <price>6.41</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>The Past Never Ends</title>
+    <price>6.50</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>The Natural History of Us (The Fine Art of Pretending #2)</title>
+    <price>5.22</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>The Nameless City (The Nameless City #1)</title>
+    <price>8.16</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>The Murder That Never Was (Forensic Instincts #5)</title>
+    <price>4.11</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>The Most Perfect Thing: Inside (and Outside) a Bird's Egg</title>
+    <price>2.96</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>The Mindfulness and Acceptance Workbook for Anxiety: A Guide to Breaking Free from Anxiety, Phobias, and Worry Using Acceptance and Commitment Therapy</title>
+    <price>3.89</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing</title>
+    <price>6.77</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>The Inefficiency Assassin: Time Management Tactics for Working Smarter, Not Longer</title>
+    <price>0.59</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>The Gutsy Girl: Escapades for Your Life of Epic Adventure</title>
+    <price>7.13</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>The Electric Pencil: Drawings from Inside State Hospital No. 3</title>
+    <price>6.06</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>The Death of Humanity: and the Case for Life</title>
+    <price>8.11</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>The Bulletproof Diet: Lose up to a Pound a Day, Reclaim Energy and Focus, Upgrade Your Life</title>
+    <price>9.05</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>The Art Forger</title>
+    <price>0.76</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>The Age of Genius: The Seventeenth Century and the Birth of the Modern Mind</title>
+    <price>9.73</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>The Activist's Tao Te Ching: Ancient Advice for a Modern Revolution</title>
+    <price>2.24</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Spark Joy: An Illustrated Master Class on the Art of Organizing and Tidying Up</title>
+    <price>1.83</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>Soul Reader</title>
+    <price>9.58</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Security</title>
+    <price>9.25</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Saga, Volume 6 (Saga (Collected Editions) #6)</title>
+    <price>5.02</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Saga, Volume 5 (Saga (Collected Editions) #5)</title>
+    <price>1.04</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Reskilling America: Learning to Labor in the Twenty-First Century</title>
+    <price>9.83</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Rat Queens, Vol. 3: Demons (Rat Queens (Collected Editions) #11-15)</title>
+    <price>0.40</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Princess Jellyfish 2-in-1 Omnibus, Vol. 01 (Princess Jellyfish 2-in-1 Omnibus #1)</title>
+    <price>3.61</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Princess Between Worlds (Wide-Awake Princess #5)</title>
+    <price>3.34</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>Pop Gun War, Volume 1: Gift</title>
+    <price>8.97</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Political Suicide: Missteps, Peccadilloes, Bad Calls, Backroom Hijinx, Sordid Pasts, Rotten Breaks, and Just Plain Dumb Mistakes in the Annals of American Politics</title>
+    <price>6.28</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Patience</title>
+    <price>0.16</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Outcast, Vol. 1: A Darkness Surrounds Him (Outcast #1)</title>
+    <price>5.44</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>orange: The Complete Collection 1 (orange: The Complete Collection #1)</title>
+    <price>8.41</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Online Marketing for Busy Authors: A Step-By-Step Guide</title>
+    <price>6.35</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>On a Midnight Clear</title>
+    <price>4.07</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Obsidian (Lux #1)</title>
+    <price>4.86</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>My Paris Kitchen: Recipes and Stories</title>
+    <price>3.37</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Masks and Shadows</title>
+    <price>6.40</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Mama Tried: Traditional Italian Cooking for the Screwed, Crude, Vegan, and Tattooed</title>
+    <price>4.02</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+  <book>
+    <title>Lumberjanes, Vol. 2: Friendship to the Max (Lumberjanes #5-8)</title>
+    <price>6.91</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Lumberjanes, Vol. 1: Beware the Kitten Holy (Lumberjanes #1-4)</title>
+    <price>5.61</price>
+    <stock>In stock</stock>
+    <rating>Three</rating>
+  </book>
+  <book>
+    <title>Lumberjanes Vol. 3: A Terrible Plan (Lumberjanes #9-12)</title>
+    <price>9.92</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Layered: Baking, Building, and Styling Spectacular Cakes</title>
+    <price>0.11</price>
+    <stock>In stock</stock>
+    <rating>One</rating>
+  </book>
+  <book>
+    <title>Judo: Seven Steps to Black Belt (an Introductory Guide for Beginners)</title>
+    <price>3.90</price>
+    <stock>In stock</stock>
+    <rating>Two</rating>
+  </book>
+  <book>
+    <title>Join</title>
+    <price>5.67</price>
+    <stock>In stock</stock>
+    <rating>Five</rating>
+  </book>
+  <book>
+    <title>In the Country We Love: My Family Divided</title>
+    <price>2.00</price>
+    <stock>In stock</stock>
+    <rating>Four</rating>
+  </book>
+</books>
