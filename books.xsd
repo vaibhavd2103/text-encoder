@@ -7,10 +7,16 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="title" type="xs:string" />
-                            <xs:element name="price" type="xs:decimal" />
+                            <xs:element name="price" type="xs:string" />
                             <xs:element name="stock" type="xs:string" />
+                            <xs:element name="description" type="xs:string" />
+                            <xs:element name="product_type" type="xs:string" />
+                            <xs:element name="price_incl_tax" type="xs:string" />
+                            <xs:element name="tax" type="xs:string" />
+                            <xs:element name="availability" type="xs:string" />
+                            <xs:element name="num_reviews" type="xs:string" />
+                            <xs:element name="image_url" type="xs:string" />
                             <xs:element name="rating" type="xs:string" />
-                            <xs:element name="image" type="xs:string" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
