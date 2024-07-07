@@ -5,7 +5,13 @@ const bookSchema = new mongoose.Schema({
   price: String,
   stock: String,
   rating: String,
-  image: String,
+  description: String,
+  tax: String,
+  product_type: String,
+  price_incl_tax: String,
+  availability: String,
+  num_reviews: String,
+  image_url: String,
 });
 
 const Book = mongoose.model("Book", bookSchema);

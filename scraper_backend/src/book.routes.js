@@ -20,14 +20,20 @@ function decodeBase64(data) {
 router.get("/", async (req, res) => {
   try {
     const encodedData = await Book.find();
-    const decodedData = encodedData.map((book) => ({
-      title: decodeBase64(book.title),
-      price: decodeBase64(book.price),
-      rating: decodeBase64(book.rating),
-      stock: decodeBase64(book.stock),
-      image: decodeBase64(book.image),
-    }));
-    res.send(decodedData);
+    if (encodedData.length > 0) {
+      const decodedData = encodedData.map((book) => ({
+        title: decodeBase64(book.title),
+        price: decodeBase64(book.price),
+        rating: decodeBase64(book.rating),
+        stock: decodeBase64(book.stock),
+        image_url: decodeBase64(book.image_url),
+      }));
+      res.send(decodedData);
+    } else {
+      res.send({
+        message: "No data",
+      });
+    }
   } catch (error) {
     console.log(error);
   }
