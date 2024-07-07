@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 // MongoDB connection
 mongoose
-  .connect("mongodb://localhost:27017/bookstore", {
+  .connect("mongodb://localhost:27017/books_db", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

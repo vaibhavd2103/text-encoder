@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 
 const bookSchema = new mongoose.Schema({
   title: String,
-  price: Number,
+  price: String,
   stock: String,
   rating: String,
+  image: String,
 });
 
 const Book = mongoose.model("Book", bookSchema);

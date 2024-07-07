@@ -1,17 +1,28 @@
 const express = require("express");
 const Book = require("./book.model");
-const base64 = require("base-64");
+const base64 = require("base64-js");
 
 const router = express.Router();
+
+// Function to decode base64 data
+function decodeBase64(data) {
+  return Buffer.from(data, "base64").toString("utf-8");
+}
 
 // Get all books
 router.get("/", async (req, res) => {
   try {
-    const books = await Book.find();
-    // const decodedData = base64.decode(books[0].encoded_xml_data);
-    const decodedData = books;
-    console.log(decodedData);
-    res.send(books);
+    const encodedData = await Book.find();
+    // const decodedData = base64.decode(encodedData[0].encoded_xml_data);
+    const decodedData = encodedData.map((book) => ({
+      title: decodeBase64(book.title),
+      price: decodeBase64(book.price),
+      rating: decodeBase64(book.rating),
+      stock: decodeBase64(book.stock),
+      image: decodeBase64(book.image),
+    }));
+    // console.log(decodedData);
+    res.send(decodedData);
   } catch (error) {
     console.log(error);
   }
