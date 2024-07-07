@@ -4,6 +4,13 @@ const base64 = require("base64-js");
 
 const router = express.Router();
 
+// API's to make
+
+// get all books paginated
+// get book by id
+// add book by id
+// get book by filters
+
 // Function to decode base64 data
 function decodeBase64(data) {
   return Buffer.from(data, "base64").toString("utf-8");
@@ -13,7 +20,6 @@ function decodeBase64(data) {
 router.get("/", async (req, res) => {
   try {
     const encodedData = await Book.find();
-    // const decodedData = base64.decode(encodedData[0].encoded_xml_data);
     const decodedData = encodedData.map((book) => ({
       title: decodeBase64(book.title),
       price: decodeBase64(book.price),
@@ -21,7 +27,6 @@ router.get("/", async (req, res) => {
       stock: decodeBase64(book.stock),
       image: decodeBase64(book.image),
     }));
-    // console.log(decodedData);
     res.send(decodedData);
   } catch (error) {
     console.log(error);

@@ -59,7 +59,7 @@ def scrape_page(url):
 def scrape_all_pages():
     # Scrape data from the first 5 pages (adjust the range as needed)
     all_books = []
-    for page in range(1, 2):
+    for page in range(1, 50):
         url = base_url + page_url.format(page)
         books = scrape_page(url)
         all_books.extend(books)
