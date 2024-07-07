@@ -59,7 +59,7 @@ def scrape_page(url):
 def scrape_all_pages():
     # Scrape data from the first 5 pages (adjust the range as needed)
     all_books = []
-    for page in range(1, 50):
+    for page in range(1, 51):
         url = base_url + page_url.format(page)
         books = scrape_page(url)
         all_books.extend(books)
@@ -72,8 +72,8 @@ def encode_data(data):
 
 
 def store_books_in_mongodb(books):
-    client = MongoClient('localhost', 27017)
-    db = client['books_db']
+    client = MongoClient("mongodb+srv://admin:admin@cluster0.nccwyqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    db = client['test']
     collection = db['books']
     encoded_books = []
     for book in books:
