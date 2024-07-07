@@ -8,7 +8,7 @@ const router = express.Router();
 
 // get all books paginated
 // get book by id
-// add book by id
+// add book
 // get book by filters
 
 // Function to decode base64 data
@@ -36,6 +36,33 @@ router.get("/", async (req, res) => {
     }
   } catch (error) {
     console.log(error);
+  }
+});
+router.post("/addbook", async (req, res) => {
+  const newBook = new Book({
+    title: "String",
+    price: "String",
+    stock: "String",
+    rating: "String",
+    description: "String",
+    tax: "String",
+    product_type: "String",
+    price_incl_tax: "String",
+    availability: "String",
+    num_reviews: "String",
+    image_url: "String",
+  });
+
+  try {
+    newBook.save().then((resp) => {
+      res.send({
+        message: "altufaltu",
+      });
+    });
+  } catch (err) {
+    res.send({
+      error: JSON.stringify(err),
+    });
   }
 });
 
