@@ -19,7 +19,7 @@ function decodeBase64(data) {
 // Get all books
 router.get("/", async (req, res) => {
   try {
-    const encodedData = await Book.find();
+    const encodedData = await Book.find().limit(20);
     if (encodedData.length > 0) {
       const decodedData = encodedData.map((book) => ({
         title: decodeBase64(book.title),
