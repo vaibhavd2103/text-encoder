@@ -2,12 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const bookRoutes = require("./src/book.routes");
+const cors = require("cors");
 
 // Initialize Express app
 const app = express();
 
 // Middleware
 app.use(bodyParser.json());
+app.use(cors());
 
 // MongoDB connection
 mongoose

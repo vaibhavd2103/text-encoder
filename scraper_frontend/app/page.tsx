@@ -8,30 +8,54 @@ import Lottie from "react-lottie";
 import * as animationData from "../assets/loader.json";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { Pagination } from "@mui/material";
+import CustomModal from "@/components/Modal";
+import NewBookForm from "@/components/NewBookForm";
 
 function Home() {
   const router = useRouter();
+  const [booksData, setBooksData] = useState<{
+    totalPages: number;
+    decodedData: Book[];
+    page: number;
+    total: number;
+    limit: number;
+  }>();
   const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [pageLoading, setPageLoading] = useState(false);
+  const [limit, setLimit] = useState(20);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [openModal, setOpenModal] = useState(false);
 
   const getBooks = async () => {
+    setPageLoading(true);
     try {
-      axios.get(backend_URL).then((res) => {
-        console.log(res.data);
-        setBooks(res.data);
-      });
+      axios
+        .get(backend_URL, {
+          params: {
+            limit: limit,
+            page: currentPage,
+          },
+        })
+        .then((res) => {
+          console.log(res.data);
+          setBooks(res.data.decodedData);
+          setBooksData(res.data);
+        });
     } catch (error) {
       alert(JSON.stringify(error));
     } finally {
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+        setPageLoading(false);
+      }, 2000);
     }
   };
 
   useEffect(() => {
     getBooks();
-  }, []);
+  }, [currentPage, limit]);
 
   const defaultOptions = {
     loop: true,
@@ -44,20 +68,36 @@ function Home() {
 
   return (
     <div className="bg-white p-6 flex flex-col w-full h-full">
-      <h1 className="text-6xl text-sky-600 font-bold font-mono text-center mb-6 [text-shadow:_0px_0px_20px_rgb(2_132_199_/_100%)]">
-        BiblioTech
-      </h1>
+      <div className="flex items-center justify-between w-full mb-6">
+        <h1 className="text-6xl text-sky-600 font-bold font-mono text-center [text-shadow:_0px_0px_20px_rgb(2_132_199_/_100%)]">
+          BiblioTech
+        </h1>
+        <button
+          onClick={() => {
+            // router.push("/add-book");
+            setOpenModal(true);
+          }}
+          className="rounded-lg bg-sky-800 font-bold py-2 px-6 hover:bg-sky-900 transition-all mt-2 text-white self-center"
+        >
+          Add new book
+        </button>
+      </div>
       {loading ? (
         <div className="h-[calc(100vh-150px)] w-full flex flex-col justify-center items-center">
           <Lottie options={defaultOptions} height={400} width={400} />
         </div>
       ) : (
         <div className="w-full flex flex-col">
+          {pageLoading && (
+            <div className="h-screen w-screen z-10 flex flex-col justify-center items-center bg-[#fff8] fixed top-0">
+              <Lottie options={defaultOptions} height={400} width={400} />
+            </div>
+          )}
           <div className="grid grid-cols-3 gap-2 md:gap-6 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 w-full">
             {books.map((item) => {
               return (
                 <div
-                  key={item.title}
+                  key={item._id}
                   className="group bg-sky-100 rounded-xl w-full overflow-hidden hover:scale-105 transition-all hover:shadow-2xl hover:shadow-black border-[2px] border-neutral-300 [transition-duration:500ms]"
                 >
                   <div className="max-h-[300px] overflow-hidden border-b-[2px] border-b-neutral-300">
@@ -85,12 +125,7 @@ function Home() {
                         },
                       }}
                     >
-                      <button
-                        onClick={() => {
-                          // router.push("book-details");
-                        }}
-                        className="rounded-lg text-sm bg-sky-600 py-1 px-4 align-middle hover:bg-sky-700 transition-all w-full mt-2 text-white"
-                      >
+                      <button className="rounded-lg text-sm bg-sky-600 py-1 px-4 align-middle hover:bg-sky-700 transition-all w-full mt-2 text-white">
                         View details
                       </button>
                     </Link>
@@ -100,13 +135,26 @@ function Home() {
             })}
           </div>
           <div className="flex self-center mt-8">
-            <p>Pagination</p>
+            <Pagination
+              count={booksData?.totalPages}
+              variant="outlined"
+              shape="rounded"
+              page={currentPage}
+              onChange={(e, page) => {
+                setCurrentPage(page);
+              }}
+            />
           </div>
-          <button className="rounded-lg bg-sky-800 font-bold py-2 px-6 hover:bg-sky-900 transition-all mt-2 text-white self-center">
-            Add new book
-          </button>
         </div>
       )}
+      <CustomModal
+        onCloseModal={() => {
+          setOpenModal(false);
+        }}
+        open={openModal}
+      >
+        <NewBookForm />
+      </CustomModal>
     </div>
   );
 }
