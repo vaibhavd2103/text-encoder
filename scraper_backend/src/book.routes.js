@@ -16,8 +16,18 @@ function decodeBase64(data) {
   return Buffer.from(data, "base64").toString("utf-8");
 }
 
+function encodeBase64(data) {
+  return Buffer.from(data, "utf-8").toString("base64");
+}
+
+router.get("/", (req, res) => {
+  res.send({
+    message: "APIs working!",
+  });
+});
+
 // Get all books
-router.get("/", async (req, res) => {
+router.get("/getAllBooks", async (req, res) => {
   const { page = 1, limit = 10 } = req.query;
   try {
     // Convert `page` and `limit` to integers
@@ -55,19 +65,19 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/addbook", async (req, res) => {
+router.post("/addBook", async (req, res) => {
   const newBook = new Book({
-    title: req.body.title,
-    price: req.body.price,
-    stock: req.body.stock,
-    rating: req.body.rating,
-    description: req.body.description,
-    tax: req.body.tax,
-    product_type: req.body.product_type,
-    price_incl_tax: req.body.price_incl_tax,
-    availability: req.body.availability,
-    num_reviews: req.body.num_reviews,
-    image_url: req.body.image_url,
+    title: encodeBase64(req.body.title),
+    price: encodeBase64(req.body.price),
+    stock: encodeBase64(req.body.stock),
+    rating: encodeBase64(req.body.rating),
+    description: encodeBase64(req.body.description),
+    tax: encodeBase64(req.body.tax),
+    product_type: encodeBase64(req.body.product_type),
+    price_incl_tax: encodeBase64(req.body.price_incl_tax),
+    availability: encodeBase64(req.body.availability),
+    num_reviews: encodeBase64(req.body.num_reviews),
+    image_url: encodeBase64(req.body.image_url),
   });
 
   try {
@@ -99,8 +109,7 @@ router.get("/:id", async (req, res) => {
       rating: decodeBase64(book.rating),
       stock: decodeBase64(book.stock),
       image_url: decodeBase64(book.image_url),
-      // Include other fields as needed, decoded or as is
-      description: decodeBase64(book.description), // Assuming description is not encoded
+      description: decodeBase64(book.description),
       tax: decodeBase64(book.tax),
       product_type: decodeBase64(book.product_type),
       price_incl_tax: decodeBase64(book.price_incl_tax),
@@ -114,18 +123,6 @@ router.get("/:id", async (req, res) => {
       error: "Invalid ID",
     });
   }
-});
-
-// Add a new book
-router.post("/", async (req, res) => {
-  const book = new Book({
-    title: req.body.title,
-    price: req.body.price,
-    stock: req.body.stock,
-    rating: req.body.rating,
-  });
-  await book.save();
-  res.send(book);
 });
 
 // Update an existing book
@@ -155,17 +152,22 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete a book
-router.post("/:id", async (req, res) => {
+router.post("/deleteBook", async (req, res) => {
   try {
-    const book = await Book.findByIdAndRemove(req.body.id);
-    if (!book)
+    const id = req.body.id;
+    const book = await Book.findByIdAndDelete(id);
+    if (!book) {
       return res.status(404).send({
         message: "Book not found",
       });
-    res.send(book);
+    }
+    res.send({
+      message: "Book deleted successfully",
+    });
   } catch (err) {
     res.status(400).send({
       error: "Invalid ID",
+      message: JSON.stringify(err),
     });
   }
 });

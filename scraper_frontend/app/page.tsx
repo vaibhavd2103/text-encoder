@@ -32,7 +32,7 @@ function Home() {
     setPageLoading(true);
     try {
       axios
-        .get(backend_URL, {
+        .get(`${backend_URL}/getAllBooks`, {
           params: {
             limit: limit,
             page: currentPage,
