@@ -87,7 +87,10 @@ router.post("/addbook", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const book = await Book.findById(req.params.id);
-    if (!book) return res.status(404).send("Book not found");
+    if (!book)
+      return res.status(404).send({
+        error: "Book not found",
+      });
 
     // Decode Base64 fields
     const decodedBook = {
@@ -107,7 +110,9 @@ router.get("/:id", async (req, res) => {
 
     res.send(decodedBook);
   } catch (err) {
-    res.status(400).send("Invalid ID");
+    res.status(400).send({
+      error: "Invalid ID",
+    });
   }
 });
 
@@ -137,21 +142,31 @@ router.put("/:id", async (req, res) => {
       { new: true }
     );
 
-    if (!book) return res.status(404).send("Book not found");
+    if (!book)
+      return res.status(404).send({
+        message: "Book not found",
+      });
     res.send(book);
   } catch (err) {
-    res.status(400).send("Invalid ID");
+    res.status(400).send({
+      error: "Invalid ID",
+    });
   }
 });
 
 // Delete a book
-router.delete("/:id", async (req, res) => {
+router.post("/:id", async (req, res) => {
   try {
-    const book = await Book.findByIdAndRemove(req.params.id);
-    if (!book) return res.status(404).send("Book not found");
+    const book = await Book.findByIdAndRemove(req.body.id);
+    if (!book)
+      return res.status(404).send({
+        message: "Book not found",
+      });
     res.send(book);
   } catch (err) {
-    res.status(400).send("Invalid ID");
+    res.status(400).send({
+      error: "Invalid ID",
+    });
   }
 });
 
