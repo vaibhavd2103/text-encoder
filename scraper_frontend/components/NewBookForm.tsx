@@ -25,19 +25,16 @@ function NewBookForm() {
         product_type: product_type,
         price_incl_tax: price + tax,
         availability: availability,
-        num_reviews: 0,
+        num_reviews: "0",
         image_url: image_url,
       };
       let config = {
         method: "post",
         maxBodyLength: Infinity,
         url: `${backend_URL}/addbook`,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        data: JSON.stringify(newBookData),
+        data: newBookData,
       };
+      console.log(newBookData);
       await axios.request(config);
       alert("Book added successfully!");
     } catch (error) {

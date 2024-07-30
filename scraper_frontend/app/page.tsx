@@ -6,14 +6,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Lottie from "react-lottie";
 import * as animationData from "../assets/loader.json";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Pagination } from "@mui/material";
 import CustomModal from "@/components/Modal";
 import NewBookForm from "@/components/NewBookForm";
 
 function Home() {
-  const router = useRouter();
   const [booksData, setBooksData] = useState<{
     totalPages: number;
     decodedData: Book[];

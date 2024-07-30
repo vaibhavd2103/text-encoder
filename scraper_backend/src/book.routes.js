@@ -16,10 +16,6 @@ function decodeBase64(data) {
   return Buffer.from(data, "base64").toString("utf-8");
 }
 
-function encodeBase64(data) {
-  return Buffer.from(data, "utf-8").toString("base64");
-}
-
 router.get("/", (req, res) => {
   res.send({
     message: "APIs working!",
@@ -67,21 +63,21 @@ router.get("/getAllBooks", async (req, res) => {
 
 router.post("/addBook", async (req, res) => {
   const newBook = new Book({
-    title: encodeBase64(req.body.title),
-    price: encodeBase64(req.body.price),
-    stock: encodeBase64(req.body.stock),
-    rating: encodeBase64(req.body.rating),
-    description: encodeBase64(req.body.description),
-    tax: encodeBase64(req.body.tax),
-    product_type: encodeBase64(req.body.product_type),
-    price_incl_tax: encodeBase64(req.body.price_incl_tax),
-    availability: encodeBase64(req.body.availability),
-    num_reviews: encodeBase64(req.body.num_reviews),
-    image_url: encodeBase64(req.body.image_url),
+    title: btoa(req.body.title),
+    price: btoa(req.body.price),
+    stock: btoa(req.body.stock),
+    rating: btoa(req.body.rating),
+    description: btoa(req.body.description),
+    tax: btoa(req.body.tax),
+    product_type: btoa(req.body.product_type),
+    price_incl_tax: btoa(req.body.price_incl_tax),
+    availability: btoa(req.body.availability),
+    num_reviews: btoa(req.body.num_reviews),
+    image_url: btoa(req.body.image_url),
   });
 
   try {
-    newBook.save().then((resp) => {
+    await newBook.save().then((resp) => {
       res.send({
         message: "Book added successfully",
       });
