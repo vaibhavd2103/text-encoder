@@ -6,12 +6,14 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Lottie from "react-lottie";
 import * as animationData from "../assets/loader.json";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Pagination } from "@mui/material";
 import CustomModal from "@/components/Modal";
 import NewBookForm from "@/components/NewBookForm";
 
 function Home() {
+  const router = useRouter();
   const [booksData, setBooksData] = useState<{
     totalPages: number;
     decodedData: Book[];
@@ -19,25 +21,29 @@ function Home() {
     total: number;
     limit: number;
   }>();
+
+  const searchParams = useSearchParams();
+
   const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [pageLoading, setPageLoading] = useState(false);
   const [limit, setLimit] = useState(20);
-  const [currentPage, setCurrentPage] = useState(1);
+  // const [currentPage, setCurrentPage] = useState(1);
   const [openModal, setOpenModal] = useState(false);
+  const currentPage = searchParams.get("page");
 
   const getBooks = async () => {
+    console.log(searchParams.get("page"));
     setPageLoading(true);
     try {
       axios
         .get(`${backend_URL}/getAllBooks`, {
           params: {
             limit: limit,
-            page: currentPage,
+            page: currentPage ?? 1,
           },
         })
         .then((res) => {
-          console.log(res.data);
           setBooks(res.data.decodedData);
           setBooksData(res.data);
         });
@@ -67,7 +73,7 @@ function Home() {
   return (
     <div className="bg-white p-6 flex flex-col w-full h-full">
       <div className="flex items-center justify-between w-full mb-6">
-        <h1 className="text-6xl text-sky-600 font-bold font-mono text-center [text-shadow:_0px_0px_20px_rgb(2_132_199_/_100%)]">
+        <h1 className="text-6xl text-sky-600 font-bold font-mono text-center [text-shadow:_0px_0px_10px_rgb(2_132_199_/_50%)]">
           BiblioTech
         </h1>
         <button
@@ -96,7 +102,7 @@ function Home() {
               return (
                 <div
                   key={item._id}
-                  className="group bg-sky-100 rounded-xl w-full overflow-hidden hover:scale-105 transition-all hover:shadow-2xl hover:shadow-black border-[2px] border-neutral-300 [transition-duration:500ms]"
+                  className="group bg-white rounded-xl w-full overflow-hidden hover:scale-105 transition-all hover:shadow-2xl hover:shadow-black border-[2px] border-neutral-300 [transition-duration:500ms]"
                 >
                   <div className="max-h-[300px] overflow-hidden border-b-[2px] border-b-neutral-300">
                     <img
@@ -137,9 +143,10 @@ function Home() {
               count={booksData?.totalPages}
               variant="outlined"
               shape="rounded"
-              page={currentPage}
+              page={currentPage ? parseInt(currentPage) : 1}
               onChange={(e, page) => {
-                setCurrentPage(page);
+                // setCurrentPage(page);
+                router.push(`?page=${page}`);
               }}
             />
           </div>
