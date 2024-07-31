@@ -9,13 +9,7 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(
-  cors({
-    origin: "https://text-encoder.onrender.com",
-    headers: ["Content-Type"],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 // MongoDB connection
 mongoose
